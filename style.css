@@ -153,11 +153,11 @@ body {
     border-radius: 15px;
     padding: 3px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease-in-out; /* Transición suave al entrar/salir */
+    transition: transform 0.5s ease-out; /* Transición suave al quitar el mouse */
 }
 
 .images1:hover {
-    animation: float 2.5s ease-in-out infinite; /* Animación solo en hover */
+    animation: float 2s ease-in-out infinite; /* Animación al pasar el mouse */
 }
 
 @keyframes float {
@@ -165,7 +165,7 @@ body {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-15px); /* Sube 15px */
+        transform: translateY(-15px); /* Elevación máxima */
     }
 }
 
