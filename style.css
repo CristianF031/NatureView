@@ -109,7 +109,7 @@ body {
 }
 
 .btn-1:hover {
-    background-color: brown;
+    background-color: #a52a2a;
 }
 
 .mariposario {
@@ -184,7 +184,7 @@ body {
 
 
 .images2 {
-    width: 320px;
+    width: 251px;
     height: auto;
     /* Mantiene la proporción */
     border: 5px solid #ff8c00;

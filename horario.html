@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios Disponibles</title>
+    <link rel="stylesheet" href="horario.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="menu">
+
+            <a href="index.html" class="logo">NatureView</a>
+            <input type="checkbox" id="menu">
+            <label for="menu"><img src="img/menuh.png" class="menu-icono" atl=""> </label>
+            <nav class="navbar">
+
+                <ul>
+                    <li><a href="index.html"> Inicio</a></li>
+                    <li><a href="servicios.html"> Servicios</a></li>
+                    <li><a href="horario.html"> Horario</a></li>
+                    <li><a href="#"> Contacto</a></li>
+                </ul>
+
+            </nav>
+    <div class="theme-selector">
+        <div class="theme-btn" id="ocean-theme" title="Tema Oceano"></div>
+        <div class="theme-btn" id="nature-theme" title="Tema Naturaleza"></div>
+        <div class="theme-btn" id="space-theme" title="Tema Espacial"></div>
+        <div class="theme-btn" id="dark-theme" title="Tema Oscuro"></div>
+    </div>
+
+    <div class="container">
+        <div class="header-info">
+            <h1>NatureView</h1>
+            <p>En esta sección, encontraras los horarios Disponibles
+                para realizar el recorrido en el Mariposario de Andoke
+                en la ciudad de Cali, Colombia!
+            </p>
+        </div>
+
+        <table class="tabla-especial">
+            <caption>Horarios Disponibles</caption>
+            <thead>
+                <tr>
+                    <th>Lunes a Jueves</th>
+                    <th>Viernes a Domingo y Festivos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10:00 a.m</td>
+                    <td><span class="badge">10:00 a.m</span></td>
+                </tr>
+                <tr>
+                    <td>12:00 p.m</td>
+                    <td><span class="badge">12:00 p.m</span></td>
+                </tr>
+                <tr>
+                    <td>2:00 p.m</td>
+                    <td><span class="badge">2:00 p.m</span></td>
+                </tr>
+                <tr>
+                    <td>No disponible</td>
+                    <td><span class="badge">3:00 p.m</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="floating-notification" id="notification"></div>
+
+    <script>
+        const themes = {
+            'ocean-theme': 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
+            'nature-theme': 'linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%)',
+            'space-theme': 'linear-gradient(135deg, #0f0c29 0%, #302b63 100%)',
+            'dark-theme': 'linear-gradient(135deg, #232526 0%, #414345 100%)'
+        };
+
+        document.querySelectorAll('.theme-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const theme = btn.id;
+                document.body.style.background = themes[theme];
+                showNotification(`Tema cambiado: ${btn.title}`);
+                localStorage.setItem('selectedTheme', theme);
+            });
+        });
+
+        function showNotification(text) {
+            const notification = document.getElementById('notification');
+            notification.textContent = text;
+            notification.style.opacity = '1';
+            setTimeout(() => {
+                notification.style.opacity = '0';
+            }, 2000);
+        }
+
+        // Cargar tema guardado
+        const savedTheme = localStorage.getItem('selectedTheme');
+        if (savedTheme) {
+            document.body.style.background = themes[savedTheme];
+        }
+    </script>
+
+<footer class="footer">
+    <div class="footerContainer">
+
+
+        <div class="footerColumn">
+            <h3>Visítenos</h3>
+            <p>Mariposario Andoke<br />Cali, Valle del Cauca<br />Colombia</p>
+            <button className="footerButton">Más información</button>
+        </div>
+
+
+        <div class="footerColumn">
+            <h3>Enlaces útiles</h3>
+            <ul>
+                <li>
+                    <Link to="/horarios">Servicios</Link>
+                </li>
+                <li>
+                    <Link to="/fotografias">Horarios</Link>
+                </li>
+                <li>
+                    <Link to="/contactos">Contactenos</Link>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footerColumn">
+            <h3>Redes Sociales</h3>
+            <div class="footerSocials">
+                <ul>
+                    <li><a href="https://www.instagram.com"><i className="fab fa-instagram">Instagram</i></a></li>
+                    <li><a href="https://www.facebook.com"><i className="fab fa-facebook">Facebook</i></a></li>
+                    <li><a href="https://x.com"><i className="fab fa-twitter">X</i></a></li>
+                    <li><a href="https://www.youtube.com"><i className="fab fa-youtube">Youtube</i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footerBottom">
+        <p>NATURE VIEW © 2025</p>
+        <a
+            href="https://www.google.com/search?client=opera&q=terminos+y+condiciones&sourceid=opera&ie=UTF-8&oe=UTF-8">Política
+            de privacidad</a> |
+        <a
+            href="https://www.google.com/search?client=opera&q=terminos+y+condiciones&sourceid=opera&ie=UTF-8&oe=UTF-8">Términos
+            y condiciones</a>
+    </div>
+</footer>
+</body>
+
+</html>
