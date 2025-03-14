@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Multilingüe</title>
+    <link rel="stylesheet" href="videoexplicativo.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="index.html">NatureView</a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="horario2.html">Horario</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    
+    <section class="video-section">
+        <div class="language-buttons">
+            <button class="lang-btn active" onclick="changeLanguage('es')">Español</button>
+            <button class="lang-btn" onclick="changeLanguage('en')">English</button>
+        </div>
+        
+        <div class="video-container">
+            <video id="miVideo" controls>
+                <source id="source-es" src="video-espanol.mp4" type="video/mp4">
+                <source id="source-en" src="english-video.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+    </section>
+
+    <script>
+        function changeLanguage(lang) {
+            const video = document.getElementById('miVideo');
+            const esBtn = document.querySelector('button[onclick="changeLanguage(\'es\')"]');
+            const enBtn = document.querySelector('button[onclick="changeLanguage(\'en\')"]');
+            
+            esBtn.classList.remove('active');
+            enBtn.classList.remove('active');
+            
+            if(lang === 'es') {
+                video.src = document.getElementById('source-es').src;
+                esBtn.classList.add('active');
+            } else {
+                video.src = document.getElementById('source-en').src;
+                enBtn.classList.add('active');
+            }
+            
+            video.load();
+            video.play();
+        }
+
+        window.onload = function() {
+            changeLanguage('es');
+        }
+    </script>
+
+<footer class="footer">
+    <div class="footerContainer">
+
+
+        <div class="footerColumn">
+            <h3>Visítenos</h3>
+            <p>Mariposario Andoke<br />Cali, Valle del Cauca<br />Colombia <br/>Más Información</p>
+        </div>
+
+        <div class="footerColumn">
+            <h3>Enlaces útiles</h3>
+            <ul>
+                <li>
+                    <Link to="/horarios">Servicios</Link>
+                </li>
+                <li>
+                    <Link to="/fotografias">Horarios</Link>
+                </li>
+                <li>
+                    <Link to="/contactos">Contactenos</Link>
+                </li>
+            </ul>
+        </div>
+
+
+    <div class="footerBottom">
+        <p>NATURE VIEW © 2025</p>
+        <a
+            href="https://www.google.com/search?client=opera&q=terminos+y+condiciones&sourceid=opera&ie=UTF-8&oe=UTF-8">Política
+            de privacidad</a> |
+        <a
+            href="https://www.google.com/search?client=opera&q=terminos+y+condiciones&sourceid=opera&ie=UTF-8&oe=UTF-8">Términos
+            y condiciones</a>
+    </div>
+</footer>
+
+</body>
+</html>
