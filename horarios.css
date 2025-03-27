@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Poetsen+One&display=swap');
+
 /* Variables Globales */
 :root {
     --color-primario: #2575fc;
     --color-secundario: #6a11cb;
-    --color-fondo: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --color-fondo: #127369;
     --color-texto: #333;
     --color-blanco: #fff;
     --sombra: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -339,3 +341,5 @@ body {
         transform: translate(-45%, -45%) scale(1.1);
     }
 }
+
+
