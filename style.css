@@ -12,6 +12,8 @@
 body {
     font-family: 'Cabin', sans-serif;
     background-color: #127369;
+    background-image: url(img/Prueba_fondo2_INDEX.jpg);
+
 }
 
 .container {
@@ -21,7 +23,7 @@ body {
 
 /* Header - Desktop */
 .header {
-    background-image: url(img/fondo2.jpg);
+    background-image: url(img/Prueba_fondo1.jpg);
     background-position: center top -110px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -246,10 +248,15 @@ body {
 
 /* Media Queries para Responsividad (Mobile) */
 @media (max-width: 1200px) {
-    .container {
-        padding: 0 30px;
+    body {
+        background-color: #127369;
+        background-image: none !important;
     }
 }
+
+
+
+
 
 @media (max-width: 992px) {
     .menu .navbar {
