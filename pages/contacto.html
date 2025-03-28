@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="contacto.css">
-    <link rel="stylesheet" href="stylenavbar.css">
-
-
-    <!-- Enlace a Font Awesome para iconos -->
+    <link rel="stylesheet" href="/css/contacto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css/stylenavbar.css">
 
     <div id="navbar-container"></div>
 
-    <script src="navbar.js"></script>
+    <script src="/js/navbar.js"></script>
 </head>
+
 <body>
     <section class="contacto-container">
-        <h2 class="titulo-contacto">Contáctanos</h2>
-        
+        <h2 class="titulo-contacto" style="color: white; padding: 1rem;">Contáctanos</h2>
+
         <div class="contacto-wrapper">
             <!-- Formulario de contacto -->
             <form class="contacto-form">
@@ -26,22 +25,22 @@
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="telefono">Teléfono:</label>
                     <input type="tel" id="telefono" name="telefono">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="mensaje">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" required></textarea>
                 </div>
-                
+
                 <button type="submit" class="btn-enviar">Enviar Mensaje</button>
             </form>
 
@@ -54,7 +53,7 @@
                         <p>Cra. 122 #6-65 (Universidad San Buenaventura)<br>Ciudad, Cali</p>
                     </div>
                 </div>
-                
+
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
                     <div>
@@ -62,7 +61,7 @@
                         <p>+57 310489104</p>
                     </div>
                 </div>
-                
+
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
                     <div>
@@ -73,43 +72,8 @@
             </div>
         </div>
 
-       
-
-    <footer class="footer">
-        <div class="footerContainer">
-
-
-            <div class="footerColumn">
-                <h3>Visítenos</h3>
-                <p>Mariposario Andoke<br />Cali, Valle del Cauca<br />Colombia <br/>Más Información</p>
-            </div>
-
-            <div class="footerColumn">
-                <h3>Enlaces útiles</h3>
-                <ul>
-                    <li>
-                        <Link to="/horarios">Servicios</Link>
-                    </li>
-                    <li>
-                        <Link to="/fotografias">Horarios</Link>
-                    </li>
-                    <li>
-                        <Link to="/contactos">Contactenos</Link>
-                    </li>
-                </ul>
-            </div>
-
-
-        <div class="footerBottom">
-            <p>NATURE VIEW © 2025</p>
-            <a
-                href="https://www.google.com/search?client=opera&q=terminos+y+condiciones&sourceid=opera&ie=UTF-8&oe=UTF-8">Política
-                de privacidad</a> |
-            <a
-                href="https://www.google.com/search?client=opera&q=terminos+y+condiciones&sourceid=opera&ie=UTF-8&oe=UTF-8">Términos
-                y condiciones</a>
-        </div>
-    </footer>
+        <script src="/js/footer.js"></script>
 
 </body>
+
 </html>

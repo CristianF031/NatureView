@@ -23,7 +23,7 @@ body {
 
 /* Header - Desktop */
 .header {
-    background-image: url(img/Prueba_fondo1.jpg);
+    background-image: url(../img/Prueba_fondo1.jpg);
     background-position: center top -110px;
     background-repeat: no-repeat;
     background-size: cover;
